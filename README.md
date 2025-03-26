@@ -1,2 +1,2 @@
 # escola-api
- Api usando node e express
+ Api usando Node.JS e Express
