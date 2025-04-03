@@ -1,14 +1,17 @@
 import express from 'express';
 import { ler, inserir, lerUM, excluir, atualizar } from './src/alunos.js';
+import cors from 'cors';
 
 const app = express();
-const porta = 3000;
+const porta = process.env.PORT || 3000;
 
 // habilitando para dar suporte ao formato JSON
 app.use(express.json());
 
 // habilitando para dar suporte a dados inseridos a partir de inputs de formulário
 app.use(express.urlencoded({extended:true}));
+
+app.use(cors());
 
 /* CONFIGURANDO ROTAS */
 
